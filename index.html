@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Luma — A little more inspiration.</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-[#f7f8f3] text-[#23251f] font-['DM_Sans',sans-serif]">
+    <header
+      class="min-w-0 max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 h-16 sm:h-18 flex items-center justify-between border-b border-black/8"
+    >
+      <a
+        href="./index.html"
+        class="font-['Manrope',sans-serif] text-3xl font-extrabold tracking-[-2px] flex items-center gap-2"
+        ><span class="text-4xl text-[#6b813b]">✳</span> luma<span
+          class="text-[#7d933c]"
+          >.</span
+        ></a
+      >
+    </header>
+    <main class="min-w-0 max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12">
+      <section
+        class="sticky top-0 z-30 -mx-4 min-w-0 border-b border-[#dfe2d7] bg-[#f7f8f3]/95 px-4 py-4 backdrop-blur-md sm:-mx-6 sm:px-6 sm:py-5 md:-mx-12 md:px-12 mb-6"
+      >
+        <div
+          class="grid min-w-0 items-center gap-6 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-12"
+        >
+          <h1
+            id="home-title"
+            class="font-['Manrope',sans-serif] text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold leading-[1.15] tracking-[-.045em]"
+          >
+            Find your next <span class="text-[#7a8c52]">inspiration.</span>
+          </h1>
+
+          <div class="min-w-0">
+            <form
+              id="search-form"
+              role="search"
+              class="group flex min-w-0 w-full items-center gap-2 rounded-2xl border border-[#d8decc] bg-white p-1.5 pl-3.5 shadow-[0_4px_18px_#29311a05] transition duration-200 hover:border-[#aebd95] focus-within:border-[#829952] focus-within:ring-4 focus-within:ring-[#d9e6bf]/50 sm:gap-3 sm:p-2 sm:pl-5"
+            >
+              <svg
+                class="h-5 w-5 shrink-0 text-[#8a927e] group-focus-within:text-[#637c3a]"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                aria-hidden="true"
+              >
+                <circle cx="10.5" cy="10.5" r="6.5" />
+                <path d="m16 16 5 5" stroke-linecap="round" />
+              </svg>
+              <label for="search" class="sr-only">Search photos</label>
+              <input
+                id="search"
+                type="search"
+                maxlength="120"
+                placeholder="Search photos…"
+                enterkeyhint="search"
+                autocomplete="off"
+                class="h-11 w-0 min-w-0 flex-1 bg-transparent text-base text-[#23251f] outline-none placeholder:text-[#92988a] focus-visible:outline-none!"
+              />
+              <button
+                id="search-button"
+                type="submit"
+                class="flex h-11 shrink-0 items-center justify-center gap-2 rounded-xl bg-[#d9f583] px-4 text-sm font-bold text-[#293719] transition-colors hover:bg-[#cbea70] active:bg-[#bddc60] sm:px-6"
+              >
+                Search <span class="hidden sm:inline">↗</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="min-w-0 pb-14">
+        <div
+          id="gallery"
+          class="columns-1 sm:columns-2 lg:columns-3 gap-[22px]"
+        ></div>
+        <div class="mt-8 flex justify-center">
+          <button
+            id="load-more"
+            type="button"
+            class="min-h-11 rounded-full bg-[#d9f583] px-8 py-3 text-sm font-semibold text-[#293719] transition-colors hover:bg-[#cbea70] disabled:cursor-wait disabled:opacity-60"
+          >
+            Load more ↓
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="./index.js" defer></script>
+  </body>
+</html>
