@@ -49,17 +49,21 @@ const searchImages = async (currentpage) => {
 
 main(currentpage);
 
-loadmore.addEventListener("click", () => {
+loadmore.addEventListener("click", async () => {
+  loadmore.textContent= "Loading...";
+
   currentpage++;
 
+
   if (currentSearchValue) {
-    searchImages(currentpage);
+    await searchImages(currentpage);
   } else {
-    main(currentpage);
+    await main(currentpage);
   }
+   loadmore.textContent="Load more" 
 });
 
-loadmore.textContent="Load more"
+
 
 searchform.addEventListener("submit", (event) => {
   event.preventDefault();
